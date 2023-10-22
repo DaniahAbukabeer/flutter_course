@@ -72,6 +72,9 @@ class _KeysState extends State<Keys> {
               // for (final todo in _orderedTodos) TodoItem(todo.text, todo.priority),
               for (final todo in _orderedTodos)
                 CheckableTodoItem(
+                  key: ValueKey(
+                      todo.text), //use value that is unique for every item
+                  //for example if our todos have id, use that
                   todo.text,
                   todo.priority,
                 ),
